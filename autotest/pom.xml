@@ -41,13 +41,13 @@
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
-			<version>LATEST</version>
+			<version>2.53.0</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-remote-driver</artifactId>
-			<version>LATEST</version>
+			<version>2.53.0</version>
 		</dependency>
 
 		<dependency>

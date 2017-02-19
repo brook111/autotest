@@ -631,5 +631,8 @@ public class SeleniumUtil {
 	public static double getScreenWidth() {
 		return java.awt.Toolkit.getDefaultToolkit().getScreenSize().getWidth();
 	}
-
+public WebElement getByJs(){
+	WebElement element=(WebElement)((JavascriptExecutor)driver).executeScript("return $('#TANGRAM__PSP_8__userName')");
+	return element;
+}
 }

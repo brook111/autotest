@@ -14,6 +14,7 @@ public class LoginPage_001_LoginSuccessFunction_Test extends BaseParpare{
   public void loginSuccessFunction(Map<String, String> data) {
 	  //等待登录页面加载
 	  LoginPageHelper.waitLoginPageLoad(seleniumUtil, timeOut);
+	
 	  // 输入登录信息
 	  LoginPageHelper.typeLoginInfo(seleniumUtil,data.get("USERNAME"), data.get("PASSWORD"));
 	  //等待首页元素显示出来

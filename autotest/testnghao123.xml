@@ -6,7 +6,7 @@
 	<!-- driver的属性配置文件保存路径 -->
 	<parameter name="driverConfgFilePath" value="config/driver.properties" />
 	<!-- 定义测试的站点 -->
-	<parameter name="testurl" value="http://127.0.0.1:1080/WebTours/" />
+	<parameter name="testurl" value="https://www.hao123.com/" />
 	<!-- 进程等待1秒中的控制时间 -->
 	<parameter name="sleepTime" value="800" />
 	<!-- 页面元素10秒不出现超时时间 -->
@@ -20,14 +20,10 @@
 	
 	<test name="Login" preserve-order="true">
 		<packages>
-			<package name="com.demo.test.testcases.login" />
+			<package name="com.hao123.testcases.home" />
 		</packages>
 	</test> 
-	<test name="Home" preserve-order="true">
-		<packages>
-			<package name="com.demo.test.testcases.home" />
-		</packages>
-	</test>
+
 	<listeners>
 		<!-- arrow插件实现用例失败重跑以及生成测试报告 -->
 		<listener class-name="com.demo.test.plugins.arrow.TestResultListener" />

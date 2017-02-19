@@ -1,19 +1,19 @@
-package com.demo.test.pages;
+package com.hao123.pages;
 
 import org.openqa.selenium.By;
 /**
  * @author Young
  * @description 登录页面元素定位声明
  * */
-public class LoginPage {
+public class LoginHaoPage {
 	/**用户名输入框*/
-	public static final By LP_INPUT_USERNAME = By.name("TANGRAM__PSP_8__userName");
+	public static final By LP_INPUT_USERNAME = By.name("word");//By.xpath(".//*[@id='TANGRAM__PSP_8__userName']");
 	
 	/**密码输入框*/
 	public static final By LP_INPUT_PASSWORD = By.name("password");
 	
 	/**登录按钮*/
-	public static final By LP_BUTTON_LOGIN = By.name("login");
+	public static final By LP_BUTTON_LOGIN = By.id("TANGRAM__PSP_8__submit");
 	
 	/**登录错误信息*/
 	public static final By LP_TEXT_ERROR= By.xpath("//*[@color='red']");

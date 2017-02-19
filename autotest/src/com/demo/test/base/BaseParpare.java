@@ -6,12 +6,14 @@ package com.demo.test.base;
  * */
 import java.io.IOException;
 import java.util.Iterator;
+
 import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.ITestContext;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
+
 import com.demo.test.utils.ExcelDataProvider;
 import com.demo.test.utils.LogConfiguration;
 import com.demo.test.utils.SeleniumUtil;
@@ -57,6 +59,12 @@ public class BaseParpare {
 	public void endTest() {
 		if (seleniumUtil.driver != null) {
 			//退出浏览器
+			try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			seleniumUtil.quit();
 		} else {
 			logger.error("浏览器driver没有获得对象,退出操作失败");
@@ -77,7 +85,7 @@ public class BaseParpare {
 		int underlineIndexNum = className.indexOf("_"); // 取得第一个_的index
 
 		if (dotIndexNum > 0) {	
-			moduleName = className.substring(24, className.lastIndexOf(".")); // 取到模块的名称
+			moduleName = className.substring(4, className.lastIndexOf(".")); // 取到模块的名称  24
 		}
 
 		if (underlineIndexNum > 0) {
